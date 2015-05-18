@@ -1,0 +1,51 @@
+body {
+  background-image: url(http://uploads.striking.ly/page/images/backgrounds/bg5.jpg);
+  background-attachment: fixed; /* 使背景图不随页面的滚动而滚动 */
+  background-size: cover; /*使背景图始终填满整个屏幕*/
+  background-position: center;/*使背景图居中*/
+}
+/* container这个div是一个居中包围框 */
+.container {
+  width: 960px;/* 居中包围框的宽度 */
+  margin: 0 auto; /* 0 auto 让浏览器自动计算左右 margin，使外包围框居中，这个居中技巧只限于有设置宽度的容器 */
+  margin-top:100px;
+}
+/*
+你常常会看到网页选择 960px 这个宽度，这是因为 一般浏览器是 1024 宽，
+加上滚动条就是 1000-1004， 所以网页的宽度都是小于 1000。而 960 是
+1000 以内公约数最多的数字，方便做 grid。
+*/
+
+.main-header{
+  background-image: url(../img/banner.jpg);
+  text-align: center;/* 头部容器居中效果 */
+  margin-bottom:20px;
+  padding:1px;
+  color:#FFFFFF;
+}
+.main-header h1{/* h1记得加，不然会随全局的那个，因为h1为更亲近 */
+  font-weight: 300;
+  font-size: 50px;
+  font-family: 'Open Sans','helvetica',arial,sans-serif;/* 谷歌字体，注意要include */
+  text-shadow: 0 1px rgba(0,0,0,0.3);/* 阴影 */
+}
+
+.main-header__avatar{
+  /* 排序：如果我们把定位还有盒模型相关的属性放前面，看起来会清晰很多 */
+  display: block;/* 把img元素设置为块 */
+  margin: 0 auto;
+  margin-top: -70px;/* 上头像顶部突出 */
+  border: 3px solid white;
+  width: 130px;
+  height: 130px;
+
+  border-radius: 999px;
+  box-shadow: 0 0px 2px 1px rgba(0,0,0,0.2);/* 头像圆 */
+}
+/*
+定位属性: position, float, z-index, clear
+盒模型相关属性: padding, margin, display, width, height, border
+字体相关
+CSS2 视觉相关属性 (background)
+CSS3 属性 (border-radius, box-shadow)*/
+
