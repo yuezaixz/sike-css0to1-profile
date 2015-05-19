@@ -92,4 +92,69 @@ HTML5的语义标签
 无编号列表模块应该使用 ul
 */
 
+/*给背景加上白色背景*/
+.info-section {
+    background-color: #fff;
+    padding: 30px 60px;
+}
+.info-section header h2 {
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.info-section header h2:after{
+  content: "";
+  border-bottom: 3px solid black;
+  display:block;
+  width:80px;
+  margin:15px auto;
+}
+.info-section__description {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 60px;
+}
 
+.info-section .whatido__skill-list{
+  list-style: none;/* 把列表装饰去掉*/
+  padding: 0;
+  margin: 0;/*这两个，把浏览器默认的间隔清除*/
+  /*overflow: hidden;把飘动元素算在自己的高度里面*/
+  /*默认的 overflow: visible 等于是说 “我允许容器里面的内容凸出这个容器”*/
+}
+
+.info-section .whatido__skill-list li{
+  display:inline-block;
+  margin: 15px 10px;
+}
+
+.whatido__skill{
+  background-repeat: no-repeat;
+  /*设置了的话，就会把文字包含在图片底下
+  background-size: contain;*/
+  background-position: center top;
+  width:30%;
+  float: left;/*让子元素向左飘动*/
+  text-align: center;
+  padding-top:120px;
+}
+
+.whatido__skill--code {
+  background-image: url(../img/skill-code.png);
+}
+
+.whatido__skill--design {
+  background-image: url(../img/skill-design.png);
+}
+
+.whatido__skill--product {
+  background-image: url(../img/skill-product.png);
+}
+
+/* 在.clearfix之后添加一个飘动的元素，和overflow: hidden 效果一模一样，就是实现原理不一样。*/
+.clearfix:after {
+  content:"";/*在 clearfix 这个元素之后加上一个空的伪元素*/
+  display:table;
+  clear:both;/*使伪元素清除飘动元素*/
+}
