@@ -3,6 +3,14 @@ body {
   background-attachment: fixed; /* 使背景图不随页面的滚动而滚动 */
   background-size: cover; /*使背景图始终填满整个屏幕*/
   background-position: center;/*使背景图居中*/
+
+  font-family: 'Open Sans','helvetica',arial,sans-serif;
+  font-weight: 300;
+  color: #62686f;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-weight: 300;
 }
 /* container这个div是一个居中包围框 */
 .container {
@@ -18,8 +26,7 @@ body {
 
 .main-header{
   background-image: url(../img/banner.jpg);
-  text-align: center;/* 头部容器居中效果 */
-  margin-bottom:20px;
+  text-align: center;/* 头部容器居中效果 */ 
   padding:1px;
   color:#FFFFFF;
 }
@@ -43,9 +50,46 @@ body {
   box-shadow: 0 0px 2px 1px rgba(0,0,0,0.2);/* 头像圆 */
 }
 /*
+排版的顺序
 定位属性: position, float, z-index, clear
 盒模型相关属性: padding, margin, display, width, height, border
 字体相关
 CSS2 视觉相关属性 (background)
 CSS3 属性 (border-radius, box-shadow)*/
+
+.main-nav{
+  text-align: center;/* 头部容器居中效果 */
+  background-color: #333;
+}
+
+.main-nav ul{
+  list-style: none;/* 把列表装饰去掉*/
+  padding: 0;
+  margin: 0;/*这两个，把浏览器默认的间隔清除*/
+}
+.main-nav ul li{
+  /* inline 元素只能设置其左右内边距和外边距，而不能设置其高度和上下内外边距。
+  和垂直高度有关的 padding, margin, height 都无效
+  display: inline;*/
+  display:inline-block;/*inline-block 元素可以简单理解为对外表现为行元素，而对内表现为块元素。*/
+  margin: 15px 10px;
+}
+.main-nav ul li a {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.main-nav ul li a:hover {
+  text-decoration: underline;/*聚焦时候的样式*/
+}
+/*
+HTML5的语义标签
+导航模块应该使用 nav
+文章模块就应该使用 article
+头部模块应该使用 header
+无编号列表模块应该使用 ul
+*/
+
 
