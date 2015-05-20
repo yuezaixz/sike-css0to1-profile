@@ -8,6 +8,14 @@ body {
   font-weight: 300;
   color: #62686f;
 }
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   font-weight: 300;
@@ -96,6 +104,7 @@ HTML5的语义标签
 .info-section {
     background-color: #fff;
     padding: 30px 60px;
+    background-size: contain;
 }
 .info-section header h2 {
   font-size: 28px;
@@ -120,6 +129,7 @@ HTML5的语义标签
   list-style: none;/* 把列表装饰去掉*/
   padding: 0;
   margin: 0;/*这两个，把浏览器默认的间隔清除*/
+  overflow: hidden;
   /*overflow: hidden;把飘动元素算在自己的高度里面*/
   /*默认的 overflow: visible 等于是说 “我允许容器里面的内容凸出这个容器”*/
 }
@@ -157,4 +167,31 @@ HTML5的语义标签
   content:"";/*在 clearfix 这个元素之后加上一个空的伪元素*/
   display:table;
   clear:both;/*使伪元素清除飘动元素*/
+}
+.info-section .education-experience__list li{
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.info-section .education-experience__list li img{
+  width: 180px;
+  float: left;/*让子元素向左飘动*/
+}
+
+.bfc_content{
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.photos__list{
+  padding: 0; 
+}
+
+.photos__list li{
+  display:inline-block;
+  width: 24%;
+  padding: 5px 5px;
+  border-width: 1px;
+}
+.photos__list li img{
+  width: 100%;
 }
