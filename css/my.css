@@ -196,3 +196,83 @@ HTML5的语义标签
 .photos__list li img{
   width: 100%;
 }
+
+.get-in-touch__list{
+  overflow: hidden;
+}
+
+.get-in-touch__list li{
+  float: left;
+  text-align: center;
+  width: 25%;
+}
+.get-in-touch__list li img{
+  width: 140px;
+}
+.get-in-touch__list li p{
+  text-align: center;
+}
+
+.contact input,
+.contact textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 8px;
+  width: 100%;
+}
+
+.contact label {
+    position: absolute;
+    width: 20%;
+    /*text-align: right;*/
+}
+
+.contact button {
+  border: none;
+  border-radius: 9999px;
+
+  background: #ffd524;
+
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  box-shadow: 0 3px 0 #daae1d;
+  width: 100%;
+}
+
+.contact_form{
+  width: 40%;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;/*会自动计算左右距离，否则不居中*/
+}
+
+.contact_form input{
+  padding: 8px;
+  left: -20%;
+} 
+
+.contact label {
+    position: absolute;
+    width: 20%;
+    /*text-align: right;*/
+}
+.contact .name{
+    left: -20%;
+    top:5%
+}
+
+.contact .email {
+    left: -20%;
+    top: 30%;
+}
+
+.contact .message {
+    left: -23%;
+    top: 60%;
+}
+
+/*做绝对定位时记得把父元素设置为 position: relative
+标签和输入栏内容应该对齐*/
+
