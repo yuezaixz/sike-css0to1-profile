@@ -184,11 +184,12 @@ HTML5的语义标签
 
 .photos__list{
   padding: 0; 
+  overflow: hidden;
 }
 
 .photos__list li{
-  display:inline-block;
-  width: 24%;
+  float: left;
+  width: 25%;
   padding: 5px 5px;
   border-width: 1px;
 }
